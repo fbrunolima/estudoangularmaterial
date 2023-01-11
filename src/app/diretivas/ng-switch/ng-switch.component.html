@@ -1,0 +1,23 @@
+<mat-card>
+  <mat-card-title>
+    Select
+  </mat-card-title>
+  <mat-card-content>
+    <section>
+      <p>Select the field that you need: </p>
+      <mat-radio-group [(ngModel)]="fieldName" name="fieldname">
+        <!--a diretiva ngmodel o fieldname recebe o value do checkbox marcado no radiobutton-->
+        <mat-radio-button value="button">Button</mat-radio-button>
+        <mat-radio-button value="checkbox">Checkbox</mat-radio-button>
+        <mat-radio-button value="progressbar">Progress bar</mat-radio-button>
+      </mat-radio-group>
+    </section>
+    <br><br>
+    <section [ngSwitch]="fieldName">
+      <button *ngSwitchCase="'button'" mat-raised-button color="warn">Button</button>
+      <mat-checkbox *ngSwitchCase="'checkbox'" >CheckBox</mat-checkbox>
+      <mat-progress-bar *ngSwitchCase="'progressbar'"  color="warn" mode="indeterminate"></mat-progress-bar>
+      <!--nos exemplos acima cada campo só será exibido caso o fieldname atenda a esses requisitos, ex button,checkbox e progressbar-->
+    </section>
+  </mat-card-content>
+</mat-card>

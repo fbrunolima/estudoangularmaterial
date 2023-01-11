@@ -1,0 +1,47 @@
+<!--
+<p *ngFor="let i of name"> {{i}}</p>
+-->
+
+<mat-card>
+  <mat-card-content>
+    <mat-selection-list #names>
+      <mat-list-option *ngFor="let nome of name">{{nome}}</mat-list-option>
+    </mat-selection-list>
+  </mat-card-content>
+  <mat-card-footer>
+    <p>Options selected: {{names.selectedOptions.selected.length}}</p>
+    <!--variavel #names no mat-selection-list dentro do mat-card-footer conseguimos realizar a contagem dos itens selecionados no mat-option-list através do código acima.-->
+  </mat-card-footer>
+</mat-card>
+
+<!--<mat-card>
+  <mat-card-content>
+    <mat-selection-list #selectedcities>
+      <mat-list-option *ngFor="let cidades of cities">Cidade: {{cidades.name}} - Estado: {{cidades.State}}</mat-list-option>
+    </mat-selection-list>
+  </mat-card-content>
+  <mat-card-footer>
+    <p>Options selected: {{selectedcities.selectedOptions.selected.length}}</p>
+    &lt;!&ndash;variavel #names no mat-selection-list dentro do mat-card-footer conseguimos realizar a contagem dos itens selecionados no mat-option-list através do código acima.&ndash;&gt;
+  </mat-card-footer>
+</mat-card>-->
+
+<mat-card>
+  <mat-card-content>
+    <mat-list>
+      <h3 matSubheader>Names</h3>
+      <mat-list-item *ngFor="let nomes of name">
+      <mat-icon matListIcon>person</mat-icon>
+      <h4 matLine>{{nomes}}</h4>
+      </mat-list-item>
+      <mat-divider></mat-divider>
+      <h3 matSubheader>Cities</h3>
+      <mat-list-item *ngFor="let cidade of cities">
+      <mat-icon matListIcon>location_city</mat-icon>
+      <h4 matLine>{{cidade.name}} - {{cidade.State}}</h4>
+      </mat-list-item>
+    </mat-list>
+  </mat-card-content>
+  <mat-card-footer>
+    </mat-card-footer>
+</mat-card>

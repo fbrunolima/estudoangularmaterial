@@ -1,0 +1,17 @@
+<mat-card class="my-card">
+  <mat-card-header>
+    <mat-card-title>Homer Simpson</mat-card-title>
+    <mat-card-subtitle>Duff!</mat-card-subtitle>
+  </mat-card-header>
+  <img mat-card-image src="https://static.wikia.nocookie.net/liberproeliis/images/c/c9/Papalegua.png/revision/latest?cb=20200215232451&path-prefix=pt-br"
+  alt="Homer Simpson">
+  <mat-card-content>
+  <ng-content></ng-content>
+    <!--o ng-content vai buscar o html que estiver dentro do selector que estiver fora do componente principal, ele fica fora do objeto-->
+    <!--neste exemplo foi adicionado um código html no app.component.html dentro do selector deste componente aqui, e o ngcontent trás tudo que estiver dentro desse selector.-->
+  </mat-card-content>
+  <mat-card-actions>
+    <button mat-button color="accent">Like</button>
+    <button mat-button color="primary">Share</button>
+  </mat-card-actions>
+</mat-card>

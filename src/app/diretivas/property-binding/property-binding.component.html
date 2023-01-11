@@ -1,0 +1,7 @@
+<p>property-binding works!</p>
+
+<button mat-button [color]="color">By first button</button>
+<!--Nesse exemplo acima, foi definido o estilo do botão via property binding onde a propriedade/estilo color do botão está fazendo referência a variável "color" do componente principal onde a cor vai ser definida nessa variável.-->
+<button mat-button [disabled]="!btnDisabled" [color]="color">My seccond button</button>
+<!--propriedade [disabled] fazendo referência a variável btnDisabled no componente, valores boleanos true ou false-->
+<button mat-button [disabled]="!btnDisabled" [color]="colors[idx]">My last button</button>

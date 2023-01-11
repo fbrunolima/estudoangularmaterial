@@ -1,0 +1,14 @@
+<mat-card>
+  <mat-card-content>
+    <section>
+      <h3>{{value}}</h3>
+      <app-chield-item [title]="title" (plusOne)="incBy(1)"
+                       (plusTwo)="incBy(2)"
+                       (minusOne)="decraseBy(1)"
+                       (minusTwo)="decraseBy(2)"
+      (inc)="incBy($event)"></app-chield-item>
+      <!--No exemplo (inc) o $event tá recebendo o evento q está sendo passado pelo componente filho, exemplo um número.-->
+      <!--Aqui o componente está sendo implementado e os eventos que vão ser tratados estão entre (parenteses) e o ="aqui defino como vai ser tratado ex: função"-->
+    </section>
+  </mat-card-content>
+</mat-card>
