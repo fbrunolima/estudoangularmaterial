@@ -34,6 +34,8 @@ import { InputBidingComponent } from './comunicação-entre-componentes/input-bi
 import {ClientComponent} from "./comunicação-entre-componentes/input-biding/client/client.component";
 import { EventComponent } from './comunicação-entre-componentes/event/event.component';
 import { ChieldItemComponent } from './comunicação-entre-componentes/event/chield-item/chield-item.component';
+import { ClientsComponent } from './comunicação-entre-componentes/clients/clients.component';
+import { ItemClientComponent } from './comunicação-entre-componentes/clients/item-client/item-client.component';
 
 @NgModule({
   declarations: [
@@ -55,7 +57,9 @@ import { ChieldItemComponent } from './comunicação-entre-componentes/event/chi
     ClientComponent,
     ClientComponent,
     EventComponent,
-    ChieldItemComponent
+    ChieldItemComponent,
+    ClientsComponent,
+    ItemClientComponent
   ],
   imports: [
     BrowserModule,
@@ -73,7 +77,8 @@ import { ChieldItemComponent } from './comunicação-entre-componentes/event/chi
     MatRadioModule,
     MatListModule,
     MatIconModule,
-    MatProgressBarModule
+    MatProgressBarModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
