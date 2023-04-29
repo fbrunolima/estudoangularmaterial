@@ -36,6 +36,9 @@ import { EventComponent } from './comunicação-entre-componentes/event/event.co
 import { ChieldItemComponent } from './comunicação-entre-componentes/event/chield-item/chield-item.component';
 import { ClientsComponent } from './comunicação-entre-componentes/clients/clients.component';
 import { ItemClientComponent } from './comunicação-entre-componentes/clients/item-client/item-client.component';
+import {Module1Module} from "./services-intro/module1/module1.module";
+import {Module2Module} from "./services-intro/module2/module2.module";
+import {MatSlideToggleModule} from "@angular/material/slide-toggle";
 
 @NgModule({
   declarations: [
@@ -59,7 +62,8 @@ import { ItemClientComponent } from './comunicação-entre-componentes/clients/i
     EventComponent,
     ChieldItemComponent,
     ClientsComponent,
-    ItemClientComponent
+    ItemClientComponent,
+
   ],
   imports: [
     BrowserModule,
@@ -78,7 +82,10 @@ import { ItemClientComponent } from './comunicação-entre-componentes/clients/i
     MatListModule,
     MatIconModule,
     MatProgressBarModule,
-    FormsModule
+    FormsModule,
+    Module1Module,
+    Module2Module,
+    MatSlideToggleModule
   ],
   providers: [],
   bootstrap: [AppComponent]
