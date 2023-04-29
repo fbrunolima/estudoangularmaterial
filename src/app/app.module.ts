@@ -39,6 +39,9 @@ import { ItemClientComponent } from './comunicação-entre-componentes/clients/i
 import {Module1Module} from "./services-intro/module1/module1.module";
 import {Module2Module} from "./services-intro/module2/module2.module";
 import {MatSlideToggleModule} from "@angular/material/slide-toggle";
+import { SubjectsComponent } from './subjects/subjects.component';
+import { SubjectChildComponent } from './subjects/subject-child/subject-child.component';
+import {FlexLayoutModule} from "@angular/flex-layout";
 
 @NgModule({
   declarations: [
@@ -63,6 +66,8 @@ import {MatSlideToggleModule} from "@angular/material/slide-toggle";
     ChieldItemComponent,
     ClientsComponent,
     ItemClientComponent,
+    SubjectsComponent,
+    SubjectChildComponent,
 
   ],
   imports: [
@@ -85,7 +90,8 @@ import {MatSlideToggleModule} from "@angular/material/slide-toggle";
     FormsModule,
     Module1Module,
     Module2Module,
-    MatSlideToggleModule
+    MatSlideToggleModule,
+    FlexLayoutModule
   ],
   providers: [],
   bootstrap: [AppComponent]
