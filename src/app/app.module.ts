@@ -15,7 +15,7 @@ import {MatInputModule} from "@angular/material/input";
 import {MatCardModule} from "@angular/material/card";
 import {MatDividerModule} from "@angular/material/divider";
 import { TwoWayDataBindingComponent } from './diretivas/two-way-data-binding/two-way-data-binding.component';
-import {FormsModule} from "@angular/forms";
+import {FormsModule, ReactiveFormsModule} from "@angular/forms";
 import { NgStyleComponent } from './diretivas/ng-style/ng-style.component';
 import {MatRadioModule} from "@angular/material/radio";
 import { NgClassComponent } from './diretivas/ng-class/ng-class.component';
@@ -41,7 +41,8 @@ import {Module2Module} from "./services-intro/module2/module2.module";
 import {MatSlideToggleModule} from "@angular/material/slide-toggle";
 import { SubjectsComponent } from './subjects/subjects.component';
 import { SubjectChildComponent } from './subjects/subject-child/subject-child.component';
-import {FlexLayoutModule} from "@angular/flex-layout";
+import { MatselectComponent } from './matselect/matselect.component';
+import {MatAutocompleteModule} from "@angular/material/autocomplete";
 
 @NgModule({
   declarations: [
@@ -68,6 +69,7 @@ import {FlexLayoutModule} from "@angular/flex-layout";
     ItemClientComponent,
     SubjectsComponent,
     SubjectChildComponent,
+    MatselectComponent,
 
   ],
   imports: [
@@ -91,7 +93,8 @@ import {FlexLayoutModule} from "@angular/flex-layout";
     Module1Module,
     Module2Module,
     MatSlideToggleModule,
-    FlexLayoutModule
+    ReactiveFormsModule,
+    MatAutocompleteModule
   ],
   providers: [],
   bootstrap: [AppComponent]
