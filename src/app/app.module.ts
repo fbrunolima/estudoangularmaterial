@@ -43,6 +43,9 @@ import { SubjectsComponent } from './subjects/subjects.component';
 import { SubjectChildComponent } from './subjects/subject-child/subject-child.component';
 import { MatselectComponent } from './matselect/matselect.component';
 import {MatAutocompleteModule} from "@angular/material/autocomplete";
+import { BasicCreationComponent } from './operadores-rxjs/basic-creation/basic-creation.component';
+import { OperatorsComponent } from './operadores-rxjs/operators/operators.component';
+import {MatRippleModule} from "@angular/material/core";
 
 @NgModule({
   declarations: [
@@ -70,6 +73,8 @@ import {MatAutocompleteModule} from "@angular/material/autocomplete";
     SubjectsComponent,
     SubjectChildComponent,
     MatselectComponent,
+    BasicCreationComponent,
+    OperatorsComponent,
 
   ],
   imports: [
@@ -94,7 +99,8 @@ import {MatAutocompleteModule} from "@angular/material/autocomplete";
     Module2Module,
     MatSlideToggleModule,
     ReactiveFormsModule,
-    MatAutocompleteModule
+    MatAutocompleteModule,
+    MatRippleModule
   ],
   providers: [],
   bootstrap: [AppComponent]
