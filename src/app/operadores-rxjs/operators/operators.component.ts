@@ -9,10 +9,10 @@ import {
   interval,
   last,
   map,
-  Observable,
+  Observable, Subject,
   Subscription,
-  take,
-  tap
+  take, takeUntil, takeWhile,
+  tap, timer
 } from "rxjs";
 import {MatRipple} from "@angular/material/core";
 
@@ -27,6 +27,10 @@ export class OperatorsComponent implements OnInit {
   @ViewChild(MatRipple) ripple: MatRipple;
 
   color='red';
+
+  public searchInput: string = '';
+
+  searchEntry$: Subject<string> = new Subject<string>();
 
   constructor() {
   }
@@ -108,4 +112,32 @@ export class OperatorsComponent implements OnInit {
     });
     rippleRef.fadeOut();
   }
+
+  debounceTimeSearch(){
+      this.searchEntry$.pipe(debounceTime(500)).subscribe((s) => console.log(s));
+  }
+
+  searchBy_UsingDebounce(event: Event){
+      this.searchEntry$.next(this.searchInput);
+  }
+
+  takeWhileClick() {
+    interval(500).pipe(takeWhile((value, index) => (value < 5)) /*espera receber um valor boleano - até quando vai executar tal ação - espera um predicado*/
+    ).subscribe((i) => console.log('takeWhile: ', i),
+      (error) => console.error(error),
+      () => console.log('Completed!'));
+  }
+
+  takeUntilSearch() {
+
+    let duetime$ = timer(5000);
+    interval(500)
+      .pipe(takeUntil(duetime$))/*Espera receber um observable que vai emitir determinado evento*/
+      .subscribe((i) => console.log('takeUntil', i),
+        (error) => console.error(error),
+        () => console.log('Completed'))
+
+  }
+
+  protected readonly takeUntil = takeUntil;
 }
